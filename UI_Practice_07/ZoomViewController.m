@@ -50,6 +50,7 @@
 //当scrollView正在缩放时会频繁响应该方法
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
     //x和y轴的增量为：当scrollView自身的宽度或者高度大于其contentSize的宽度或者高度时，增量为：自身宽度或者高度减去contentSize宽度或者高度除以2，否则为0
+    //testing 
     CGFloat delta_x = (scrollView.bounds.size.width > scrollView.contentSize.width) ? (scrollView.bounds.size.width - scrollView.contentSize.width) / 2 : 0;
     CGFloat delta_y = (scrollView.bounds.size.height > scrollView.contentSize.height) ? (scrollView.bounds.size.height - scrollView.contentSize.height) / 2 : 0;
     UIImageView *imageView = (UIImageView *)[scrollView viewWithTag:212];
